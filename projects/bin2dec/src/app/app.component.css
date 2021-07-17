@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  align-items: flex-end;
+}
+
+.input-group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-group label {
+  margin: 10px;
+}
+
+.error-message {
+  position: absolute;
+  margin: 115px 10px 10px 10px;
+  color: red;
+  font-size: small;
+}
+
+button {
+  height: 41px;
+  border-radius: 5px;
+}
+
+input {
+  margin: 0px 10px;
+  border-radius: 5px;
+  height: 35px;
+}
