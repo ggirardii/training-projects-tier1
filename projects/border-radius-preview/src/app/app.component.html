@@ -4,7 +4,7 @@
     <input type="number" [ngModel]="border.topRight" (ngModelChange)="onValueChange('topRight', $event)"/>
   </div>
   <div [style]="borderRadiusCss" class="square">
-    <input id="borderRadiusCss" [value]="borderRadiusCss" spellcheck="false" disabled/>
+    <input readonly id="borderRadiusCss" [value]="borderRadiusCss" spellcheck="false"/>
     <button *ngIf="borderRadiusCss !== ''" (click)="copyToClipboard()">Copy</button>
   </div>
   <div class="input-group">
