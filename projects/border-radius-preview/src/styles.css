@@ -1,0 +1,12 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  display: flex;
+  flex: 1;
+}
+
+app-root {
+  display: flex;
+  flex: 1;
+}

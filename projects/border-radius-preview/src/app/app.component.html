@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="input-group">
+    <input type="number" [ngModel]="border.topLeft" (ngModelChange)="onValueChange('topLeft', $event)"/>
+    <input type="number" [ngModel]="border.topRight" (ngModelChange)="onValueChange('topRight', $event)"/>
+  </div>
+  <div [style]="borderRadiusCss" class="square">
+    <input id="borderRadiusCss" [value]="borderRadiusCss" spellcheck="false" disabled/>
+    <button *ngIf="borderRadiusCss !== ''" (click)="copyToClipboard()">Copy</button>
+  </div>
+  <div class="input-group">
+    <input type="number" [ngModel]="border.bottomLeft" (ngModelChange)="onValueChange('bottomLeft', $event)"/>
+    <input type="number" [ngModel]="border.bottomRight" (ngModelChange)="onValueChange('bottomRight', $event)"/>
+  </div>
+</div>
