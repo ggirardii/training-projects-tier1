@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="numbers">
+    <button (click)="addNumber(1)">1</button>
+    <button (click)="addNumber(2)">2</button>
+    <button (click)="addNumber(3)">3</button>
+    <button (click)="addNumber(4)">4</button>
+    <button (click)="addNumber(5)">5</button>
+    <button (click)="addNumber(6)">6</button>
+    <button (click)="addNumber(7)">7</button>
+    <button (click)="addNumber(8)">8</button>
+    <button (click)="addNumber(9)">9</button>
+    <button (click)="addNumber(0)">0</button>
+  </div>
+  <div class="operators">
+    <button *ngFor="let operator of operators" (click)="setOperator(operator)">{{operator.name}}</button>
+    <button (click)="evaluate()">=</button>
+    <button (click)="clear()">C</button>
+    <button (click)="clearAll()">CA</button>
+    <button (click)="alterNumberSign()">+-</button>
+  </div>
+  <div *ngIf="!resultLengthError; else lengthError" class="display">
+    {{number1}}
+    <br/>
+    {{operator?.name}}
+    <br/>
+    {{number2}}
+  </div>
+</div>
+
+<ng-template #lengthError>
+  ERR
+</ng-template>
