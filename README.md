@@ -25,7 +25,7 @@ Each project has the following **features**:
 | ------------------------- | ---------------------------------------------------------- | ------ |
 | Bin2Dec                   | Binary-to-Decimal number converter                         | [x]    |
 | Border Radius Previewer   | Preview how CSS3 border-radius values affect an element    | [x]    |
-| Calculator                | Calculator                                                 | [ ]    |
+| Calculator                | Calculator                                                 | [x]    |
 | Christmas Lights          | Simulate a string of Christmas lights                      | [ ]    |
 | Cause Effect App          | Click list item to display item details                    | [ ]    |
 | Color Cycle               | Cycle a color value through incremental changes            | [ ]    |
