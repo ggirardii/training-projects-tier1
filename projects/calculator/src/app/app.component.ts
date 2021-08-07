@@ -14,10 +14,10 @@ import {
 })
 export class AppComponent {
   operators: Operator[] = [
-    new PlusOperator(),
-    new MinusOperator(),
     new MultiplicationOperator(),
-    new DivisionOperator()
+    new DivisionOperator(),
+    new MinusOperator(),
+    new PlusOperator()
   ]
   number1: number | undefined = undefined;
   number2: number | undefined = undefined;
@@ -32,11 +32,18 @@ export class AppComponent {
       this.resultLengthError = false;
   }
 
-  alterNumberSign(): void {
+  changeNumerToPositive(): void {
     if(this.number2 !== undefined)
-      this.number2 = this.number2 * -1;
+      this.number2 = Math.abs(this.number2);
     else if(this.operator === undefined && this.number1 !== undefined)
-      this.number1 = this.number1 * -1;
+      this.number1 = Math.abs(this.number1);
+  }
+
+  changeNumerToNegative(): void {
+    if(this.number2 !== undefined)
+      this.number2 = Math.abs(this.number2) * -1;
+    else if(this.operator === undefined && this.number1 !== undefined)
+      this.number1 = Math.abs(this.number1) * -1;
   }
 
   addNumber(number: number): void {
