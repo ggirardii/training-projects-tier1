@@ -1,0 +1,19 @@
+<div class="person-container">
+  <div class="person-list">
+    <div
+      *ngFor="let person of people"
+      class="person"
+      [ngClass]="{'person-selected' : person.name === selectedPerson?.name}"
+      (click)="setSelectedPerson(person)">
+      {{person.name}}
+    </div>
+  </div>
+  <div class="person-information">
+      <div>Street: {{selectedPerson?.street}}</div>
+      <div>City: {{selectedPerson?.city}}</div>
+      <div>State: {{selectedPerson?.state}}</div>
+      <div>Country: {{selectedPerson?.country}}</div>
+      <div>Telephone: {{selectedPerson?.telephone}}</div>
+      <div>Birthday: {{selectedPerson?.birthday}}</div>
+  </div>
+</div>

@@ -296,6 +296,103 @@
           }
         }
       }
+    },
+    "cause-effect": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/cause-effect",
+      "sourceRoot": "projects/cause-effect/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/cause-effect",
+            "index": "projects/cause-effect/src/index.html",
+            "main": "projects/cause-effect/src/main.ts",
+            "polyfills": "projects/cause-effect/src/polyfills.ts",
+            "tsConfig": "projects/cause-effect/tsconfig.app.json",
+            "assets": [
+              "projects/cause-effect/src/favicon.ico",
+              "projects/cause-effect/src/assets"
+            ],
+            "styles": [
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/cause-effect/src/environments/environment.ts",
+                  "with": "projects/cause-effect/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "cause-effect:build:production"
+            },
+            "development": {
+              "browserTarget": "cause-effect:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "cause-effect:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cause-effect/src/test.ts",
+            "polyfills": "projects/cause-effect/src/polyfills.ts",
+            "tsConfig": "projects/cause-effect/tsconfig.spec.json",
+            "karmaConfig": "projects/cause-effect/karma.conf.js",
+            "assets": [
+              "projects/cause-effect/src/favicon.ico",
+              "projects/cause-effect/src/assets"
+            ],
+            "styles": [
+              "projects/cause-effect/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "defaultProject": "bin2dec"

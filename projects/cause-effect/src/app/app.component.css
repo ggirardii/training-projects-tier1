@@ -1,0 +1,32 @@
+.person-container {
+  display: flex;
+}
+
+.person-list {
+  flex: 1;
+}
+
+.person {
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  font-size: 30px;
+}
+
+.person:hover {
+  color: orangered;
+}
+
+.person-selected {
+  background-color: darkcyan;
+  color: white;
+}
+
+.person-information {
+  flex: 1;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.person-information div {
+  margin-bottom: 10px;
+}
