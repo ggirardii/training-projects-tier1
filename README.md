@@ -27,7 +27,7 @@ Each project has the following **features**:
 | Border Radius Previewer   | Preview how CSS3 border-radius values affect an element    | [x]    |
 | Calculator                | Calculator                                                 | [x]    |
 | Christmas Lights          | Simulate a string of Christmas lights                      | [ ]    |
-| Cause Effect App          | Click list item to display item details                    | [ ]    |
+| Cause Effect App          | Click list item to display item details                    | [x]    |
 | Color Cycle               | Cycle a color value through incremental changes            | [ ]    |
 | Countdown Timer           | Event Countdown timer                                      | [ ]    |
 | CSV2JSON App              | CSV to JSON converter                                      | [ ]    |
