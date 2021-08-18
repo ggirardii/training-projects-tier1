@@ -1,0 +1,23 @@
+<label>Red</label>
+<input maxlength="2" [disabled]="isRunning" [(ngModel)]="red"/>
+<label>Increment Value</label>
+<input type="number" [disabled]="isRunning" [(ngModel)]="redIncrementValue"/>
+
+<Label>Blue</Label>
+<input [disabled]="isRunning" [(ngModel)]="blue"/>
+<label>Increment Value</label>
+<input [disabled]="isRunning" [(ngModel)]="blueIncrementValue"/>
+
+<label>Green</label>
+<input [disabled]="isRunning" [(ngModel)]="green"/>
+<label>Increment Value</label>
+<input [disabled]="isRunning" [(ngModel)]="greenIncrementValue"/>
+
+<div class="box">box</div>
+
+<button
+  (click)="changeAnimationState()"
+  [ngClass]="{'button-start': !isRunning, 'button-stop': isRunning}"
+>
+  {{!isRunning ? 'Start' : 'Stop'}}
+</button>
